@@ -9,6 +9,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+#region Middlewares
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -21,5 +22,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+#endregion
 
 app.Run();
